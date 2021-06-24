@@ -1,0 +1,32 @@
+---
+title: "notes"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+Notes:
+
+Go here if you want to run a shiny modules training: https://github.com/sbhagerty/ShinyModulesIntro
+
+Other links shared:
+https://mastering-shiny.org/best-practices.html
+https://kellobri.github.io/shiny-prod-book/
+https://happygitwithr.com/
+https://solutions.rstudio.com/example/images/hospitals/atc-diagram.png
+https://github.com/Novartis/patprofile/blob/master/R/module_AECM.R
+https://github.com/rinpharma/2019_presentations/blob/master/talks_folder/2019-Nicholls-Making_Better_Decisions.pdf
+https://colorado.rstudio.com/rsc/Transitioning_R_FDA_Submissions/Transitioning_R_FDA_Submissions.html#1
+
+```{r eval=FALSE}
+library(usethis)
+use_git_config(user.name = "Nicholas Masel", user.email = "nmasel@its.jnj.com")
+
+renv::activate()
+renv::restore()
+
+shinytest::installDependencies()
+shinytest::testApp(suffix = "linux")
+```
